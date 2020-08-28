@@ -7,6 +7,13 @@ import (
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Whoa, Go is neat!")
+	fmt.Fprintf(w, "<p>Go is fast!</p>")
+	fmt.Fprintf(w, "<p>...and simple!</p>")
+	fmt.Fprintf(w, "<p>You %s even add %s</p>", "can", "<strong>variables</strong>")
+	fmt.Fprintf(w, `
+		<h6>You can even do ...</h6>
+		<h5>multiple lines ...</h5>
+		<h4>in one %s</h4>`, "formatted print")
 }
 
 func aboutHandler(w http.ResponseWriter, r *http.Request) {
